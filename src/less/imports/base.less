@@ -1,0 +1,112 @@
+.home-section{
+	position: relative;
+	padding-top: 70px;
+	&::before{
+		content: '';
+		position: absolute;
+		top: -5px;
+		width: 100%;
+		height: 6px;
+		background-image: url("../img/value-bah-bg.png");
+	}
+	&__header{
+		margin-bottom: 60px;
+	}
+	&__title{
+		position: relative;
+		margin-bottom: 30px;
+		padding-bottom: 35px;
+		.pfcentroslab-medium;
+		font-size: 30px;
+		font-weight: normal;
+		text-align: center;
+		text-transform: uppercase;
+		&::after{
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translate(-50%, 0);
+			width: 165px;
+			height: 4px;
+			background: @mainColor;
+		}
+	}
+	&__subtitle{
+		margin-top: 60px;
+		.pfcentroslab-medium;
+		font-size: 1.5em; /* 24/16 */
+		font-weight: normal;
+		text-transform: uppercase;
+		text-align: center;
+	}
+	&__description{
+		margin: 0 auto;
+		max-width: 950px;
+		font-size: 0.9375em; /* 15/16 */
+		text-align: center;
+	}
+	&__footer{
+		padding: 60px 0;
+		background: #2c3949;
+		.btn{
+			margin-top: 0;
+		}
+	}
+}
+/*features
+===============================*/
+.features{
+	text-align: center;
+	&__item{
+		.inline-block;
+		margin: 0 15px;
+		margin-bottom: 70px;
+		padding: 54px 32px;
+		width: 264px;		
+		text-align: center;
+		background: @bgBlueDark;
+		border-radius: 5px;
+		.img-wrap{
+			.inline-block;
+			width: 124px;
+			height: 124px;
+			line-height: 124px;
+			text-align: center;
+			background: @mainColor;
+			border-radius: 50%;
+		}
+		img{
+			width: 75px;
+		}
+		p{
+			height: 75px;
+		}
+	}
+}
+.features{
+		perspective: 600px;
+		&__item{
+			opacity: 0;
+			transform: rotateY(180deg);
+			transition: all 1s ease;
+			&.on{
+				opacity: 1;
+				transform: rotateY(0);
+			}
+		}
+		.img-wrap{
+			margin-bottom: 40px;
+		}
+		h4{
+			.raleway-bold;
+			font-weight: normal;
+			text-transform: uppercase;
+			color: #e5e5e5;
+		}
+		p{
+			font-size: 0.875em; /* 14/16 */
+			line-height: 1.4;
+			color: #97a4b2;
+		}
+	}

@@ -1,0 +1,86 @@
+.inline-block(@valign: top) {
+  display: inline-block;
+  vertical-align: @valign;
+}
+
+.line-height(@px) {
+  height: @px;
+  line-height: @px;
+}
+/*fonts
+===============================*/
+.roboto{
+	font-family: 'RobotoRegular', sans-serif;
+}
+.roboto-bold{
+	font-family: 'RobotoBold', sans-serif;
+}
+.raleway{
+	font-family: 'RalewayRegular', sans-serif;
+}
+.raleway-semibold{
+	font-family: 'RalewaySemiBold', sans-serif;
+}
+.raleway-bold{
+	font-family: 'RalewayBold', sans-serif;
+}
+.pfcentroslab-medium{
+	font-family: 'PFCentroSlabProMedium', sans-serif;
+}
+.pfcentroslab-bold{
+	font-family: 'PFCentroSlabProBold', sans-serif;
+}
+
+/*section
+===============================*/
+.section{
+	&__title{
+		position: relative;
+		padding-bottom: 30px;
+		.pfcentroslab-medium;
+		font-size: 1.875em; /* 30/16 */
+		color: @textBlue;
+		text-transform: uppercase;
+		text-align: center;
+		&::after{
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			margin-bottom: 30px;
+			width: 165px;
+			height: 4px;
+			background: @mainColor;
+		}
+	}
+}
+/*button
+===============================*/
+a.btn,
+.btn{
+	display: table;
+	margin: 0 auto;
+	margin-top: 30px;
+	padding: 0 34px;
+	height: 45px;
+	.pfcentroslab-bold;
+	font-size: 20px;
+	line-height: 45px;
+	text-decoration: none;
+	color: #000;
+	background: @mainColor;
+	border: none;
+	border-bottom: 3px solid darken(@mainColor, 15%);
+	&:hover{
+		background: lighten(@mainColor, 5%);
+	}
+	&:active{
+		background: darken(@mainColor, 10%);
+	}
+	&:focus{
+		text-decoration: none;
+		outline: none;
+	}
+}
+

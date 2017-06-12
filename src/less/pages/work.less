@@ -1,0 +1,47 @@
+.work{
+	&.home-section{
+		&::before{
+			background-image: url("../img/blue-bah.png");
+		}
+	}
+	color: @textWhite;
+	background: @bgBlueDark;
+	.home-section__content{
+		text-align: center;
+	}
+	&__item{
+		.inline-block;
+		margin-left: -38px;
+		width: 290px;
+		height: 130px;
+		background: url("../img/work/arrow-first.svg") no-repeat;
+		&:first-child{
+			margin-left: 0;
+			background: url("../img/work/arrow.svg") no-repeat;
+		}
+		img{
+			margin-top: 40px;
+			margin-left: 30px;
+			vertical-align: middle;
+			width: 35px;
+		}
+		span{
+			.inline-block;
+			margin-top: 40px;
+		}
+		.number{
+			margin-top: 35px;
+			margin-left: 10px;
+			.pfcentroslab-medium;
+			font-size: 22px;
+		}
+		.text{
+			width: 140px;
+			.pfcentroslab-medium;
+		}
+	}
+	.home-section__footer{
+		margin-top: 60px;
+		background: #394B5F;
+	}
+}

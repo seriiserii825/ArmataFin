@@ -1,0 +1,72 @@
+.slider{
+	position: relative;
+	&__item{
+		margin: 0 auto;
+		padding: 15px 30px 125px;
+		text-align: center;
+		cursor: pointer;
+		&:focus{
+			outline: none;
+		}
+		.img-wrap{
+			.inline-block;
+			margin-bottom: 30px;
+			width: 117px;
+			height: 117px;
+			border-radius: 50%;
+			box-shadow: 0 0 0 7px @mainColor;
+			overflow: hidden;
+			img{
+				margin-top: -7px;
+				margin-left: 3px;
+				max-width: 110%;
+			}
+		}
+		h4{
+			margin-bottom: 10px;
+			.raleway-bold;
+			font-size: 1.125em; /* 18/16 */
+			font-weight: normal;
+		}
+		span{
+			margin-bottom: 25px;
+			.inline-block;
+			font-size: 0.8125em; /* 13/16 */
+			color: #6e7b8b;
+		}
+		p{
+			margin: 0 auto;
+			max-width: 940px;
+			font-size: 0.875em; /* 14/16 */
+			color: #000;
+		}
+	}
+	.slick-prev,
+	.slick-next{
+		position: absolute;
+		top: 30%;
+		width: 16px;
+		height: 30px;
+		font-size: 0;
+		background: url("../img/slider/arrow.png");
+		border: none;
+		transition: all .5s ease;
+		opacity: .4;
+		@media screen and (max-width: 500px) {
+		 	 top: 15%;
+		} 
+		&:hover{
+			opacity: 1;
+		}
+		&:focus{
+			outline: none;
+		}
+	}
+	.slick-prev{
+		left: 10%;
+	}
+	.slick-next{
+		right: 10%;
+		background-position: -16px 0;
+	}
+}

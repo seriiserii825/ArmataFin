@@ -1,0 +1,42 @@
+.deal{
+	.col-xs-6{
+		@media screen and (max-width: 360px) {
+		 	 width: 100%;
+		} 
+	}
+	&__item{
+		margin-bottom: 65px;
+		p{
+			.roboto-bold;
+			font-size: 0.8125em; /* 13/16 */
+			text-align: center;
+		}
+	}
+	.img-wrap{
+		position: relative;
+		display: table;
+		margin: 0 auto;
+		padding-bottom: 140px;
+		&:after{
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 60px;
+			height: 1px;
+			background: @mainColor;
+		}
+		img{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 80px;
+			height: 80px;
+		}
+	}
+	.home-section__footer{
+		background: #E5E5E5;
+	}
+}
